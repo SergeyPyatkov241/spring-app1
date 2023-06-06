@@ -1,0 +1,67 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>ru.pyatkov.springcourse</groupId>
+  <artifactId>spring-app1</artifactId>
+  <packaging>war</packaging>
+  <properties>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+    <saaj.version>2.0.1</saaj.version>
+    <jaxb.version>4.0.2</jaxb.version>
+    <lombok.version>1.18.26</lombok.version>
+    <keycloak.version>20.0.3</keycloak.version>
+    <jaxws.api.version>2.3.1</jaxws.api.version>
+    <cxf-codegen.version>3.4.0</cxf-codegen.version>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+    <javax.jws-api.version>1.1</javax.jws-api.version>
+    <junit.jupiter.version>5.9.2</junit.jupiter.version>
+    <junit.platform.version>1.9.0</junit.platform.version>
+    <javax.xml.soap.version>1.4.0</javax.xml.soap.version>
+    <javax.activation.version>1.1.1</javax.activation.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <version>1.0-SNAPSHOT</version>
+  <name>spring-app1 Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+      <version>5.1.4.RELEASE</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-beans -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-beans</artifactId>
+      <version>5.1.4.RELEASE</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>5.1.4.RELEASE</version>
+    </dependency>
+
+    <dependency>
+      <groupId>javax.ws.rs</groupId>
+      <artifactId>javax.ws.rs-api</artifactId>
+      <version>2.1.1</version>
+    </dependency>
+
+  </dependencies>
+  <build>
+    <finalName>spring-app1</finalName>
+  </build>
+</project>

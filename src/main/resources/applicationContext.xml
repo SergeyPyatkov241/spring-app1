@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+    <!--Импорт файла в контекст: -->
+    <context:property-placeholder location="classpath:musicPlayer.properties" />
+
+    <bean id="musicBean"
+          class="ru.pyatkov.springcourse.ClassicalMusic"
+          init-method="doMyInit"
+          destroy-method="doMyDestroy"
+          factory-method="getClassicalMusic">
+    </bean>
+
+    <!-- Добавление зависимости при помощи конструктора
+    <bean id = "musicPlayer"
+          class = "ru.pyatkov.springcourse.MusicPlayer">
+        <constructor-arg ref="musicBean"/>
+    </bean>
+    -->
+
+    <!-- Добавление зависимости при помощи сеттера и ссылки на объект, а также при помощи простого значения
+    <bean id = "musicPlayer"
+          class = "ru.pyatkov.springcourse.MusicPlayer">
+        <property name="music" ref="musicBean"/>
+        <property name="name" value="Some name"/>
+        <property name="volume" value="50"/>
+    </bean>
+    -->
+    <!-- Добавление зависимости при помощи сеттера и считывания данных из внешнего файла -->
+    <bean id = "musicPlayer"
+          class = "ru.pyatkov.springcourse.MusicPlayer"
+          scope="prototype">
+        <property name="music" ref="musicBean"/>
+        <property name="name" value="${musicPlayer.name}"/>
+        <property name="volume" value="${musicPlayer.volume}"/>
+    </bean>
+
+</beans>
